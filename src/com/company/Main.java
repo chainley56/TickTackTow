@@ -32,17 +32,27 @@ public class Main {
         Random rand2 = new Random();
         int randRow = rand.nextInt(3);
         int randCol = rand2.nextInt(3);
+        if (a[randRow][randCol] == String.valueOf('-')){
+            a[randRow][randCol] = String.valueOf('O');}
+        else
+        if (randRow == 0){
+            randRow += 1;
+            a[randRow][randCol] = String.valueOf('O');
+        }
+        if (randRow != 0){
+            randRow -= 1;
+            a[randRow][randCol] = String.valueOf('O');
+        }
         /*if (a[randRow][randCol] == String.valueOf('-')){
             a[randRow][randCol] = String.valueOf('O');}*/
 
-        a[randRow][randCol] = String.valueOf('O');
+        //a[randRow][randCol] = String.valueOf('O');
 
 
         //a [randRow][randCol] = String.valueOf('O');
         for (int i = 0; i <= 2; i++)
         {
-            for (int j= 0; j<=2; j++)
-            {
+            for (int j= 0; j<=2; j++){
                 System.out.print(a[i][j]+ "\t" + "|" + "\t");
             }
             System.out.println();
@@ -61,10 +71,20 @@ public class Main {
         Random rand4 = new Random();
         int randRow2 = rand3.nextInt(3);
         int randCol2 = rand4.nextInt(3);
-        /*if (a[randRow][randCol] == String.valueOf('-')){
-            a[randRow][randCol] = String.valueOf('O');}*/
+        if (a[randRow2][randCol2] == String.valueOf('-')){
+            a[randRow2][randCol2] = String.valueOf('O');}
+            else
+                if (randRow2 == 0){
+                    randRow += 1;
+                    a[randRow2][randCol2] = String.valueOf('O');
+                }
+                if (randRow2 != 0){
+                    randRow -= 1;
+                    a[randRow2][randCol2] = String.valueOf('O');
+                }
 
-        a[randRow2][randCol2] = String.valueOf('O');
+
+        //a[randRow2][randCol2] = String.valueOf('O');
 
 
         for (int i = 0; i <= 2; i++)
@@ -77,7 +97,7 @@ public class Main {
             System.out.println();
         }
         Scanner move3 = new Scanner(System.in);
-        System.out.println("Enter your second move!");
+        System.out.println("Enter your third move!");
         System.out.println("Enter row. Ex: 0, 1 or 2!");
         int Rmove3= move2.nextInt();
         Scanner move3a = new Scanner(System.in);
@@ -94,7 +114,6 @@ public class Main {
         String siuia = "X";
 
         a[randRow3][randCol3] = String.valueOf('O');
-
 
         for (int i = 0; i <= 2; i++)
         {
